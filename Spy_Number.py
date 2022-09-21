@@ -1,16 +1,12 @@
-def sd(a):
-    A=[]
-    while a>0:
-        A.append(a%10)
-        a=(a-a%10)//10
-    return A
-def pr(a):
-    b=1
-    for i in sd(a):
-        b*=i
-    return b
 a=int(input())
-if sum(sd(a))==pr(a):
+s=0
+p=1
+while a:
+    r=a%10
+    s+=r
+    p*=r
+    a//=10
+if s==p:
     print('Spy Number')
 else:
     print('Not Spy Number')
