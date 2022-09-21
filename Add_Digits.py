@@ -1,12 +1,11 @@
 def sd(a):
-    A=[]
-    while a>0:
-        A.append(a%10)
+    s=0
+    while a:
+        s+=(a%10)
         a=(a-a%10)//10
-        
-    return A
+    if s<10:
+        return s
+    else:
+        return sd(s)
 a=int(input())
-b=sum(sd(a))
-c=sum(sd(b))
-d=sum(sd(c))
-print(d)
+print(sd(a))
