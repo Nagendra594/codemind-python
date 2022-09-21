@@ -1,24 +1,18 @@
-def sd(a):
+def dig(a):
     A=[]
-    while a>0:
+    while a:
         A.append(a%10)
         a=(a-a%10)//10
     return A
-def final(a):
-    for i in sd(a):
-        if i==0:
-            pass
-        elif a%i!=0:
-            break
-    else:
+def SDN(a):
+    A=dig(a)
+    for i in A:
+        if i==0 or a%i!=0:
+            A.remove(i)
+    if len(dig(a))==len(A):
         return True
 a=int(input())
 b=int(input())
-A=[]
 for i in range(a,b+1):
-    if final(i)==True:
-        A.append(i)
-for j in A:
-    if j%10==0:
-        A.remove(j)
-print(*A)
+    if SDN(i):
+        print(i,end=' ')
