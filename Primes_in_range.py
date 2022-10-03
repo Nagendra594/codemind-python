@@ -1,12 +1,12 @@
 import math
 def po(a,b):
-	v=[]
+	c=0
 	for i in range(a,b+1):
 		if i<1 or i==1:
 			continue
 		elif prime(i):
-			v.append(i)
-	return len(v)
+			c+=1
+	return c
 def prime(n):
 	g=int(math.sqrt(n))
 	for j in range(2,g+1):
