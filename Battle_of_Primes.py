@@ -5,12 +5,11 @@ def prime(a):
             c+=1
     if c==2:
         return True
-a=int(input())
-b=int(input())
-c=a+b
-d=c+1
-while d:
-    if prime(d):
-        print((d-c))
+day1=int(input())
+day2=int(input())
+b=day1+day2+1
+while b:
+    if prime(b):
+        print(b-(day1+day2))
         break
-    d+=1
+    b+=1
