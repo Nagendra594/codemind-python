@@ -1,13 +1,10 @@
-import math
-def prime(s):
-    g=int(math.sqrt(s))
-    if s<=1:
-        return False
-    if s>1:
-        for i in range(2,g+1):
-            if s%i==0:
-                return False
-    return True
+def prime(a):
+    c=0
+    for i in range(1,a+1):
+        if a%i==0:
+            c+=1
+    if c==2:
+        return True
 a=int(input())
 b=int(input())
 for i in range(a+1,b):
