@@ -1,4 +1,2 @@
 a=int(input())
-b=list(map(int,input().split()))
-n=int(input())
-print(b.count(n))
+print(list(map(int,input().split())).count(int(input())))
