@@ -1,23 +1,35 @@
+from math import sqrt as s
 def prime(a):
-    c=0
-    for i in range(1,a+1):
-        if a%i==0:
-            c+=1
-    if c==2:
-        return True
-    else:
+    g=int(s(a))
+    if a<=1:
         return False
+    for i in range(2,g+1):
+        if a%i==0:
+            return False
+            break
+    return True
 for _ in range(int(input())):
     a=int(input())
-    A=[]
-    for i in range(a-10,a+10):
-        if prime(i):
-            A.append(abs(a-i))
-    c=min(A)+a
-    d=abs(min(A)-a)
-    if prime(c) and prime(d):
-        print(min(c,d))
-    elif prime(c):
-        print(c)
+    P=0
+    b=0
+    N=0
+    c=0
+    while True:
+        if a<=b:
+            break
+        if prime(b):
+            P=b
+        b+=1
+    while True:
+        if a<c and prime(c):
+            N=c
+            break
+        c+=1
+    if prime(a):
+        print(a)
+    elif abs(P-a)==(N-a):
+        print(P)
+    elif abs(P-a)>(N-a):
+        print(N)
     else:
-        print(d)
+        print(P)
