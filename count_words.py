@@ -1,10 +1,7 @@
 def vc(a):
-	v='aeiou'
-	V='AEIOU'
+	v='aeiouAEIOU'
 	if a[0] in v and a[-1] not in v:
 			return True
-	elif a[0] in V and a[-1] not in V:
-		return True
 a=input().strip()
 b=a.split()
 c=0
