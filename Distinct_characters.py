@@ -1,6 +1,6 @@
 a=input().lower()
-v=[]
+b=[]
 for i in a:
-	if i!=' ' and a.count(i)==1 and i not in v:
-		v.append(i)
-print(''.join(sorted(v)))
+	if i!=' ' and i not in b:
+		b.append(i)
+print(''.join(sorted(b)))
