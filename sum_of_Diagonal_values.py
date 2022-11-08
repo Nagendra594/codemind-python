@@ -1,5 +1,4 @@
 r,c=map(int,input().split())
-a=r//2
 pd=0
 sd=0
 A=[]
@@ -9,7 +8,7 @@ for i in range(r):
     pd+=arr[i]
     sd+=arr[-i-1]
 if r%2:
-    m=A[a][a]
+    m=A[r//2][r//2]
     print((pd+sd)-m)
 else:
     print(pd+sd)
